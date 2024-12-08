@@ -5,6 +5,7 @@ import { PageParamsProvider as PageParamsProvider__ } from "@plasmicapp/react-we
 
 import { PlasmicHome } from "../components/plasmic/simple_light_landing_page/PlasmicHome";
 import { useRouter } from "next/router";
+import TestingPage from "./TestingPage";
 
 function Home() {
   // Use PlasmicHome to render this component as it was
@@ -27,9 +28,9 @@ function Home() {
     <PageParamsProvider__
       route={useRouter()?.pathname}
       params={useRouter()?.query}
-      query={useRouter()?.query}
-    >
-      <PlasmicHome />
+      query={useRouter()?.query}>
+      {/* <PlasmicHome /> */}
+      <TestingPage />
     </PageParamsProvider__>
   );
 }
